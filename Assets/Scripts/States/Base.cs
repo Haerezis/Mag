@@ -6,14 +6,20 @@ namespace States
 {
   public class Base : MonoBehaviour
   {
-    public void handleInput()
-    {
+    StateController _stateController;
 
+    public void Start() {
+      _stateController = GetComponent<StateController>("StateController");
     }
 
-    public void updateCharacter()
-    {
+    public void handleInput() {
+    }
 
+    public void updateCharacter() {
+    }
+
+    protected void trigger(StateController.Trigger trigger) {
+      _stateController.machine.Fire(trigger);
     }
   }
 }

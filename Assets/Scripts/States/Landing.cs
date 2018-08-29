@@ -6,15 +6,9 @@ namespace States
 {
   public class Landing : Base
   {
-
-    void handleInput()
-    {
-      //TODO
-    }
-
     void updateCharacter()
     {
-      //TODO
+      trigger(StateController.Trigger.BackToNormal);
     }
   }
 }
